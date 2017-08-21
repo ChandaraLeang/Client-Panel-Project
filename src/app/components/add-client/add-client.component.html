@@ -59,7 +59,6 @@
           [(ngModel)]="client.email"
           name="email"
           #clientEmail="ngModel"
-          minlength="2"
           required
         >
         <div *ngIf="clientEmail.errors?.required && clientEmail.touched" class="alert alert-danger">
