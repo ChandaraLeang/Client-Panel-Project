@@ -19,9 +19,12 @@
       </div>
       <div class="col-md-4">
         <h3 class="pull-right">
-          Balance:| 
-          <span [class.text-danger]="hasBalance" [class.text-success]="!hasBalance">
-            {{client.balance | currency:"USD":true}}
+          Balance:
+          <span
+            [class.text-danger]="hasBalance"
+            [class.text-success]="!hasBalance"
+          >
+            {{ client.balance | currency:"USD":true}}
           </span>
           <small>
             <a (click)="showBalanceUpdateInput = !showBalanceUpdateInput"><i class="fa fa-pencil"></i></a>
@@ -35,10 +38,9 @@
             <button type="submit" class="btn btn-primary">Update</button>
           </form>
         </div>
-        <br>
       </div>
     </div>
-
+    <hr>
     <ul class="list-group">
       <li class="list-group-item">Contact Email: {{client.email}}</li>
       <li class="list-group-item">Contact Phone: {{client.phone}}</li>
